@@ -15,11 +15,12 @@ vim.opt.rtp:prepend(lazypath)
 -- Import Options
 require("config.options")
 
+require ("config.keymaps")
 -- Setup lazy.nvim
 require("lazy").setup({
   	spec = {
     		{ import = "plugins" },
-    		{ import = "plugins.colorschemes.kanagawa" },
+    		{ import = "plugins.colorschemes.nordic" },
   	},
 
   	checker = {
