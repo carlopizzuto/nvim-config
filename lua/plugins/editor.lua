@@ -1,5 +1,5 @@
 return { 
-	
+	-- nvim-tree; file browser 
 	{
   		"nvim-tree/nvim-tree.lua",
 		dependencies = {
@@ -9,6 +9,20 @@ return {
     			require("nvim-tree").setup()
   		end,
 	},
+
+	-- wilder; command-line suuggestions
+	{
+  		'gelguy/wilder.nvim',
+  		config = function()
+    			local wilder = require('wilder')
+    			wilder.setup({ modes = { ':', '/', '?' } })
+   		 	wilder.set_option('renderer', wilder.popupmenu_renderer({
+      			highlighter = wilder.basic_highlighter(),
+    			}))
+  		end,
+	},
+	
+	-- lualine; status line customization
 	{
 		'nvim-lualine/lualine.nvim',
 		dependencies = { 'nvim-tree/nvim-web-devicons' },
