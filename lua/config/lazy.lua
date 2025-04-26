@@ -20,7 +20,7 @@ require ("config.keymaps")
 require("lazy").setup({
   	spec = {
     		{ import = "plugins" },
-    		{ import = "plugins.colorschemes.gruvbox" },
+    		{ import = "colorschemes.gruvbox" },
   	},
 
   	checker = {
