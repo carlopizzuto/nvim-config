@@ -84,7 +84,16 @@ return {
     "nvim-telescope/telescope.nvim",
     cmd = "Telescope",
     dependencies = { "nvim-lua/plenary.nvim" },
-    opts = { defaults = { layout_strategy = "flex" } },
+    opts = {
+      defaults = {
+        layout_strategy      = "flex",
+        file_ignore_patterns = {  -- hide Python virtual-envs (add more if you like)
+          "/venv/",
+          "/env/",
+		"/node_modules/",
+        },
+      },
+    },
   },
   {
     "polirritmico/telescope-lazy-plugins.nvim",
