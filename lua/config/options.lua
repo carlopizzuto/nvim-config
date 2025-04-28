@@ -15,3 +15,5 @@ vim.opt.shiftwidth = 5
 -- make each tab 5 spaces long
 vim.opt.tabstop = 5
 
+-- open horizontal split on the right
+vim.opt.splitright = true

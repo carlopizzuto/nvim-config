@@ -13,3 +13,17 @@ vim.keymap.set("n", "<leader>e", "<CMD>NvimTreeToggle<CR>", { desc = "Toggle Nvi
 -- telescope keymaps
 vim.keymap.set("n", "<leader>ff", "<CMD>Telescope find_files<CR>", { desc = "Find Files", silent = true })
 vim.keymap.set("n", "<leader>fb", "<CMD>Telescope buffers<CR>", { desc = "Buffers" })
+
+-- open a terminal in bottom split with a height of 20
+vim.keymap.set('n', '<leader>tt', "<CMD>belowright 20split | terminal<CR><C-w>J", { desc = "Open Terminal Below", silent = true })
+
+-- reload nvim & Lazy
+vim.keymap.set('n', '<leader>rr', "<CMD>source $MYVIMRC | Lazy reload<CR>", { desc = "Reload Config + Lazy", silent = true })
+
+-- exit terminal mode & go to editor above
+vim.keymap.set('t', '<leader>,,', [[<C-\><C-n><C-w>k]], { desc = "Exit T-Mode + Focus Editor Above" })
+
+vim.keymap.set('n', '<leader>//', [[<C-w>ja]], { desc = "Focus Terminal Bellow" })
+
+
+
