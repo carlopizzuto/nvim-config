@@ -91,6 +91,8 @@ return {
           "/venv/",
           "/env/",
 		"/node_modules/",
+		"/__pycache__/",
+		"/*.egg-info/",
         },
       },
     },
