@@ -17,3 +17,13 @@ vim.opt.tabstop = 5
 
 -- open horizontal split on the right
 vim.opt.splitright = true
+
+
+-- diagnostics
+vim.diagnostic.config({
+  virtual_text  = true,   -- show the little inline messages
+  signs         = true,   -- the W / E icons in the sign column
+  underline     = true,
+  severity_sort = true,
+  update_in_insert = true, -- update diagnostics in insert mode
+})
